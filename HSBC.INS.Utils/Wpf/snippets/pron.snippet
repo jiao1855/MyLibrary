@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>pron</Title>
+      <Shortcut>pron</Shortcut>
+      <Description>
+        自动实现的更改通知的属性的代码片段
+      </Description>
+      <Author>Charles Jiao</Author>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>type</ID>
+          <ToolTip>属性类型</ToolTip>
+          <Default>string</Default>
+        </Literal>
+        <Literal>
+          <ID>field</ID>
+          <ToolTip>字段名</ToolTip>
+          <Default>MyField</Default>
+        </Literal>
+        <Literal>
+          <ID>property</ID>
+          <ToolTip>属性名</ToolTip>
+          <Default>MyProperty</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp">
+        <![CDATA[private $type$ $field$;
+        public $type$ $property$
+        {
+            get { return $field$; }
+            set { SetProperty(ref $field$, value); }
+        }$end$]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>
